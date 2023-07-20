@@ -1,0 +1,39 @@
+{
+  "name": "Your Collection #6",
+  "description": "Welcome Navneet ",
+  "image": "ipfs://QmZBu2qNDFdcMgt7dmxnPV7acfC7Mde9bL13c4hXzNg9Kt/6.png",
+  "dna": "56d20616f81480d0db31e0f6f8fb85d13f76c75b",
+  "edition": 6,
+  "date": 1688533935722,
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Black"
+    },
+    {
+      "trait_type": "Eyeball",
+      "value": "White"
+    },
+    {
+      "trait_type": "Eye color",
+      "value": "Green"
+    },
+    {
+      "trait_type": "Iris",
+      "value": "Medium"
+    },
+    {
+      "trait_type": "Shine",
+      "value": "Shapes"
+    },
+    {
+      "trait_type": "Bottom lid",
+      "value": "Middle"
+    },
+    {
+      "trait_type": "Top lid",
+      "value": "High"
+    }
+  ],
+  "compiler": "HashLips Art Engine"
+}
