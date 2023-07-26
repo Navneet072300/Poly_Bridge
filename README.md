@@ -37,6 +37,8 @@ Run the following commands to approve and deposit the minted NFTs from Ethereum 
 ```shell
 npx hardhat run scripts/batchTransfer.js --network goerli
 ```
+## Output
+![image](https://github.com/Navneet072300/Poly_Bridge/assets/89797286/3d8e0747-72fd-4ea1-9432-b27fb0da98c0)
 
 
 
