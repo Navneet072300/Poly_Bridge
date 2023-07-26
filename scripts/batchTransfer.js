@@ -2,7 +2,7 @@
 const { FXRootContractAbi } = require("../contractABIs");
 
 async function main() {
-  const nftAddress = "0x90469BDE0bfE5cC5c3eaf3915d5535dc1CBCF794";
+  const nftAddress = "0xa2BAcbcCDeeE8dEEF2d976682D178C1384Cfcfad";
   const nftCollection = await ethers.getContractAt("MyNFT", nftAddress);
   const fxRoot = await ethers.getContractAt(
     FXRootContractAbi,
@@ -17,7 +17,7 @@ async function main() {
   for (const tokenId of tokenIds) {
     let approveTxn = await nftCollection.approve(fxRoot.address, tokenId);
     await approveTxn.wait();
-    console.log("Token #" + tokenId + " approved");
+    console.log("NFT: " + tokenId + " approved");
 
     let txn = await fxRoot.deposit(
       nftCollection.address,
@@ -26,17 +26,14 @@ async function main() {
       "0x6566"
     );
     await txn.wait();
-    console.log("Token #" + tokenId + " deposited");
+    console.log("NFT: " + tokenId + " deposited");
   }
 
-  const balance = await nftAddress.balanceOf(signer.address);
-
   // Print the balance of the wallet
-
-  console.log(
-    "MyNFT wallet balance is: ",
-    MyNFT.balanceOf("0x17c607b7645fcbb91b87acacaf14e3ca4da2a5da")
+  const balance = await hre.ethers.provider.getBalance(
+    "0x17c607b7645fcbb91b87acacaf14e3ca4da2a5da"
   );
+  console.log("MyNFT wallet balance is: ", balance.toString());
 }
 
 main().catch((error) => {
